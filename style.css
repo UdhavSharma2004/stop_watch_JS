@@ -1,0 +1,73 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    /* outline:solid 2px rgb(255, 255, 255); */
+    color:rgb(0, 0, 0);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://wallpapercave.com/wp/wp3360572.jpg") no-repeat;
+    background-size:100vw;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.clockbody{
+    position: relative;
+    width:500px;
+    height:100px;
+    background-color: aliceblue;
+    color:black;
+    border-radius: 10px;
+    /* top: 350px; */
+}
+#display{
+    font-size: 80px;
+}
+.bts{
+    width:50px;
+    height:50px;
+    outline: none;
+    border: none;
+    background: transparent;
+    margin:0 2%;
+}
+.bts i{
+    display:inline-block;
+    font-size:2.5rem;
+}
+#start{
+    background-color: green;
+    border-radius: 50%;
+}
+#start i{
+    color:white;
+}
+#pause{
+    display: none;
+    background-color: orange;
+    border-radius: 50%;
+}
+#pause i{
+    color:black;
+}
+#reload{
+    background-color: red;
+    border-radius: 50%;
+}
+#reload i{
+    color:white;
+}
+@keyframes anim{
+    from{
+        transform: rotate(0deg);
+        transition-duration: 0.6s;
+    }
+    to{
+        transform: rotate(360deg);
+        transition-duration: 0.3s;
+    }
+}
