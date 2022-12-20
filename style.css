@@ -2,42 +2,88 @@
 *{
     margin: 0;
     padding: 0;
-    /* outline:solid 2px rgb(255, 255, 255); */
-    color:rgb(0, 0, 0);
+    outline:solid 2px rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
 }
 body{
     width: 100vw;
     height: 100vh;
-    background: url("https://wallpapercave.com/wp/wp3360572.jpg") no-repeat;
+    background:linear-gradient(#00203FFF,#ADEFD1FF);
     background-size:100vw;
     text-align: center;
     display:flex;
+    flex-wrap: wrap;
     justify-content:center;
     align-items: center;
 }
 .clockbody{
     position: relative;
-    width:500px;
-    height:100px;
-    background-color: aliceblue;
-    color:black;
+    /* padding:auto; */
+    width:100%;
+    background-color: rgba(0, 31, 63, 0.427);
+    color:rgb(255, 255, 255);
     border-radius: 10px;
-    /* top: 350px; */
+}
+.topdisplay{
+    /* display:flex; */
+    text-align: center;
 }
 #display{
-    font-size: 80px;
+    font-size: 5rem;
 }
+#milidisplay{
+    font-size:2.5rem;
+}
+@media (max-width:426px) {
+    #display{
+        font-size:3rem;
+    }
+    #milidisplay{
+        font-size:1.5rem;
+    }
+    .bts{
+        width:2rem;
+        height:2rem;
+    }
+    .bts i{
+    font-size:1.5rem;
+}
+}
+@media (max-width:280px) {
+    #display{
+        font-size:1.5rem;
+    }
+    #milidisplay{
+        font-size:0.75rem;
+    }
+    .bts{
+        width:0.9rem;
+        height:0.9rem;
+    }
+    .bts i{
+        
+    font-size:1rem;
+}
+}
+
 .bts{
-    width:50px;
-    height:50px;
-    outline: none;
-    border: none;
-    background: transparent;
+    width:3rem;
+    height:3rem;
     margin:0 2%;
 }
 .bts i{
     display:inline-block;
     font-size:2.5rem;
+}
+#lap{
+    position: relative;
+    bottom:0;
+    right:0;
+    font-size:1.5rem;
+    overflow: hidden;
+}
+.ri-flag-fill{
+    color:red;
 }
 #start{
     background-color: green;
@@ -61,13 +107,36 @@ body{
 #reload i{
     color:white;
 }
+#reload:active{
+    animation: anim;
+    animation-duration: 1s;
+}
 @keyframes anim{
-    from{
+    0%{
         transform: rotate(0deg);
-        transition-duration: 0.6s;
+        transition-duration: 3s;
+        animation-duration: 3s;
     }
-    to{
-        transform: rotate(360deg);
-        transition-duration: 0.3s;
+    60%{
+        transform: rotate(216deg);
+        transition-duration: 3s;
     }
+    80%{
+        transform: rotate(288deg);
+        transition-duration: 3s;
+    }
+}
+.laptable{
+    
+    margin: auto;
+    padding:auto;
+}
+#laptab{
+    display:none;
+    border-collapse: collapse;
+    background-color: rgba(173, 239, 209, 0.518);
+}
+.laptable td ,tr{
+    color:black;
+    border-collapse: collapse;
 }

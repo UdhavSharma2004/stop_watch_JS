@@ -10,12 +10,21 @@
 </head>
 <body>
     <div class="clockbody">
-        <p id="display">00 : 00 : 00</p>
+        <div class="topdisplay">
+        <p id="display">00 : 00 : 00<span id="milidisplay"> : 00</span></p>
+        </div>
         <div class="btns">
             <button id="start" class="bts"><i class="ri-play-circle-line"></i></button>
             <button id="pause" class="bts"><i class="ri-pause-circle-line"></i></button>
             <button id="reload" class="bts"><i class="ri-restart-line"></i></button>
+            <button id="lap"><i class="ri-flag-fill"></i></button>
         </div>
+    </div>
+    <div class="laptable">
+        <table id="laptab">
+            <td>Lap Number</td>
+            <td>TimeStamp</td>
+        </table>
     </div>
 </body>
 <script src="./app.js"></script>
